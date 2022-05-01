@@ -8,7 +8,7 @@ const fragmento = document.createDocumentFragment()
 
 let carrito = {}
 
-
+//Espera a que se cargue el dom//
 document.addEventListener('DOMContentLoaded', () => {
     fetchDatos()
     if(localStorage.getItem('carrito')){
@@ -16,17 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarCarrito()
     }
 })
-
+//captura el evento cuando se hace click en las tarjetas//
 tarjetas.addEventListener('click', e => {
     agregarCarrito(e)
 })
-
+//captura el evento cuando se hace click en os items//
 items.addEventListener('click', e => {
 
 botonAccion(e)
 
 })
-
+//utiliza fetch para recopilar la información del json//
 const fetchDatos = async () => {
     try {
         const res = await fetch("../js/productos.json")
@@ -36,7 +36,7 @@ const fetchDatos = async () => {
         console.log(error)
     }
 }
-
+//renderiza las tarjetas on la información del fetch//
 const renderizarProducto = datos => {
     datos.forEach(producto => {
         templateTarjetas.querySelector('.titulo').textContent = producto.titulo
@@ -49,13 +49,14 @@ const renderizarProducto = datos => {
     })
     tarjetas.appendChild(fragmento)
 }
-
+//selecciona todos los parent element del boton para guardar la info en el carrito//
 const agregarCarrito = e => {
     if (e.target.classList.contains('boton')) {
         setearCarrito(e.target.parentElement)
     }
     e.stopPropagation()
 }
+//actualiza la cantidad del carrito//
 const setearCarrito = objeto => {
     const producto ={
         id: objeto.querySelector('.boton').dataset.id,
@@ -69,7 +70,7 @@ const setearCarrito = objeto => {
     carrito[producto.id] = {...producto}
     renderizarCarrito()
 }
-
+//renderiza los elementos del carrito//
 const renderizarCarrito = () =>{
     items.innerHTML =''
     Object.values(carrito).forEach(producto =>{
@@ -83,12 +84,13 @@ const renderizarCarrito = () =>{
 
         const clonar = templateCarrito.cloneNode(true)
         fragmento.appendChild(clonar)
+        //setea el localstorage//
         localStorage.setItem('carrito', JSON.stringify(carrito))
     })
         items.appendChild(fragmento)
         renderizarFooter()
 }
-
+//renderiza la sección en donde se hace la suma del total//
 const renderizarFooter= () =>{
     footer.innerHTML= ''
     if(Object.keys(carrito).length ===0){
@@ -111,7 +113,7 @@ const renderizarFooter= () =>{
         renderizarCarrito()
     })
 }
-
+//otorga la funcionalidad a los botones de aumentar o reducir cantidad de productos//
 const botonAccion = e => {
     if (e.target.classList.contains('btn-info')) {
         const producto = carrito[e.target.dataset.id]
