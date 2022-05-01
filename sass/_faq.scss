@@ -1,0 +1,36 @@
+/*Texto de la página F.A.Q*/
+.contenedorgrid {
+    @include medidas(50%, 100%);
+    justify-content: center;
+    display: grid;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "boxmodel1 boxmodel2";
+        p{
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: white;
+        }
+}
+
+.boxmodel1 {
+    @extend .boxmodel1;
+    margin-left: 15px;
+    grid-area: boxmodel1;
+}
+
+.boxmodel2 {
+    @extend .boxmodel2;
+    margin-right: 15px;
+    margin-left: 25px;
+    grid-area: boxmodel2;
+}
+
+h1.titulo {
+    text-align: center;
+    color: white;
+}

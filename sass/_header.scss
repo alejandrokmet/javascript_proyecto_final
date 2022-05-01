@@ -1,0 +1,58 @@
+.bg-dark {
+
+    .container-fluid {
+        margin-bottom: 25px;
+        margin-top: 25px;
+
+        a:hover {
+            background: black;
+            border-radius: 5px;
+            color: white;
+            transition: box-shadow .3s;
+        }
+    }
+}
+.bg-dark .navbar-brand{
+    pointer-events:none;
+
+}
+
+.logo_header {
+    @include medidas(5.344rem, 21.875rem);
+}
+.navbar-collapse {
+    font-size: x-large;
+}
+
+menu {
+    margin-bottom: 2px;
+
+
+    ul {
+
+        font-size: 30px;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        text-transform: uppercase;
+        justify-content: center;
+        margin-top: 15%;
+        padding-bottom: 1%;
+
+        li {
+            display: inline-block;
+            padding: 10px;
+        }
+    }
+}
+.form-control {
+    width: 350px;
+}
+
+.fa .fa-shopping-cart{
+
+    margin-left: 50px;
+    
+}

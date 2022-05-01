@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+
+}
+.container-fluid a:hover{
+    background:black;
+    border-radius: 5px;
+    color: white;
+    transition: box-shadow .3s;
+
+
+
+}
+
+
+
+body
+{
+    background-image:url(../imagenes/bg.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    color:white;
+    height: 100%;
+    width: 100%;
+}
+
+.header{
+    box-sizing:content-box;
+    display:flex;
+    padding-top: 8%;
+    background-color:rgb(20, 20, 20);
+    
+    }
+.contenedor{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+/*Texto de la página F.A.Q*/
+.contenedorgrid{
+justify-content: center;
+display:grid;
+width: 100%;
+height: 50%;
+margin-bottom: 40%;
+margin-top: 5%;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 400px auto auto;
+grid-template-areas:
+"boxmodel1 boxmodel2"
+}
+.contenedorgrid header{
+    grid-area: header;
+}
+.lista_1{
+
+    grid-area: lista_1;
+}
+.lista_2
+{
+grid-area: lista_2;
+}
+
+.boxmodel1{
+    margin-left: 15px;
+    grid-area: boxmodel1;
+}
+.boxmodel2{
+    margin-right: 15px;
+    grid-area: boxmodel2;
+}
+
+
+/*Texto de la página contacto*/
+.contacto{
+margin-top: 5%;
+margin-left: 1%;
+font-family: "Montserrat", sans-serif; 
+font-size: 150%;
+}
+
+/*Estilos al pasar el mouse sobre los menues*/
+
+.linkfooter a:hover{
+
+    background: rgb(1, 1, 27);
+    transition: 0,5s;
+    border-radius: 5px;
+    color: white;
+
+
+    
+}
+a{
+    text-decoration: none;
+    color:white;
+    padding :5px;
+}   
+/*CARROUSEL*/
+.carousel {
+    position: relative;
+    margin-block: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.text-uppercase {
+    text-transform: uppercase!important;
+    color: blueviolet;
+    font-size:x-large;
+    margin-left: 35px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-left: 35px;
+}
+ul{
+    margin-left: 35px;
+
+}
+    /*Gmaps*/
+
+    .mapouter {
+        margin: 25px auto;
+        height: 600px;
+        width: 700px;
+        display:flex;
+    }
+    .gmap_canvas {
+        display:flex;
+        float:left;
+        overflow: hidden;
+        background: none !important;
+        height: 600px;
+        width: 700px;
+        justify-content: center;
+    
+    }
+
+    /*Menues*/
+    .menu{
+        margin-bottom: 2px;
+        
+        }
+        .menu ul{
+        
+            font-size: 30px;
+            font-family: "Montserrat", sans-serif; 
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            text-transform: uppercase;
+            justify-content: center;
+            margin-top: 15%;
+            padding-bottom: 1%;
+        }
+        .menu ul li{
+            display:inline-block;
+            padding: 10px;
+        
+        
+        }
+        
+
+@media only screen and (max-width:700px){
+
+
+        .contenedorgrid{
+        width: 100%;
+        height: 100%;
+        text-align: justify;
+        margin-top: 0%;
+        grid-template-columns: 1fr;
+        grid-template-columns: 300px 300px 300px 300px;
+        grid-template-areas:
+        "header"
+        "boxmodel1"
+        "boxmodel2"
+        "lista_1"
+        "lista_2"
+        ;
+    }
+    .boxmodel1{
+        grid-area: boxmodel1;
+        }
+
+    .boxmodel2{
+        grid-area: boxmodel2;
+        }
+
+}
+
+@media only screen and (min-width:701px) and (max-width:1440px){
+    .contenedorIndex{
+        display:grid;
+        width: 100%;
+        height:100%;
+        margin-top: 0%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px auto auto;
+        grid-template-areas:
+        "header "
+        "slider"
+        "lista2"
+        ;
+    
+    }
+
+    .header{
+        grid-area: header;
+
+
+    }
+    .body{
+        background-size: cover;
+        position:absolute;
+    }
+    .menu{
+        margin-left:200px
+
+    }
+    .menu ul{
+        position:left;
+        margin-right: 200px;
+        font-size: 15px;
+    }
+
+    .logo_header{
+        height:100%;
+        width: auto;
+    }
+    .slider{
+        overflow:hidden;
+        padding-top: 15%;
+        grid-area: slider;
+    }
+    .lista2{
+        font-size: 20px;
+        grid-area: lista2;
+    
+    }
+    .contenedorgrid{
+        width: 20%;
+        text-align: justify;
+        margin-top: 0%;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "boxmodel1"
+        "boxmodel2"
+        "lista2"
+        "lista3"
+        ;
+    
+    }
+    .boxmodel1{
+    width: 1000px;
+    margin-top: 45%;
+    }
+    .boxmodel2{
+    width: 1000px;   
+    margin-top: 25%;
+    margin-left: 25px;
+    }
+    .lista_1{
+    font-size: 20px;
+    margin-left: 0%;
+    margin-top: 15%;
+
+    }
+    .lista_2{
+    font-size: 20px;
+    margin-left: 0%;
+    margin-top: 0%;
+    }
+}

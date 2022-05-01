@@ -1,0 +1,40 @@
+.pt-4 {
+    padding-top: 1.5rem !important;
+    background-color: #212529;
+}
+
+.list-inline-item:hover {
+    opacity: 1;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+
+}
+
+.list-inline-item img {
+    margin-bottom: 5%;
+}
+.hover13 figure:hover img {
+    opacity: 1;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

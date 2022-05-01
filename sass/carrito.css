@@ -1,0 +1,46 @@
+/* ? SHOPPING CART */
+.shopping-cart-items {
+  padding: 20px 0px;
+  font-size: 1rem;
+}
+
+.shopping-cart-header {
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.shopping-cart-image {
+  max-width: 80px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.shopping-cart-quantity-input {
+  max-width: 45px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #eee;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.template-carrito {
+  min-height: 96px;
+  font-size: 1rem;
+    margin-right: 75%;
+    color: white;
+}
+.table{
+
+  color: white;
+}
+
+.botonBorrar{
+
+  text-align: end;
+  
+}
+
+.shopping-cart h6 {
+  font-size: 1rem;
+}/*# sourceMappingURL=carrito.css.map */
